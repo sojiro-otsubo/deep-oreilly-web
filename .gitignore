@@ -1,4 +1,4 @@
 djangovenv/
 __pycache__/
-media/convert.jpg
+convert.jpg
 .env

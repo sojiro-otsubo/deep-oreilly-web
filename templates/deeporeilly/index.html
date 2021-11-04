@@ -1,0 +1,29 @@
+
+{% extends "deeporeilly/base.html" %}
+{% block title %}オライリー風に画像を変換しよう{% endblock %}
+
+{% block content %}
+<div class="alert">
+    <td><h1 class="mt-4 mb-5 boder-top">画像変換フォーム</h1></td>
+  <br>
+  <p class="custom-class">JPEGまたはPNGファイルを選択して変換ボタンを押してください。</p>
+  <br>
+  <form action="{% url 'deeporeilly:predict' %}"  method="post" class="form" enctype="multipart/form-data">
+  {% csrf_token %}
+  <div class="form-group">
+    <div class="custom-file">
+      {{ form.image }}
+      <label class="custom-file-label" for="customFile">
+        変換したいファイルを選択してください。
+      </label>
+    </div>
+  </div>
+  <br>
+  <div class="btn-wrapper">
+  <button type="submit" class="btn btn-secondary btn-lg btn-block">変換スタート</button>
+  </div>
+  </form>
+</div>
+<br></br>
+
+{% endblock %}

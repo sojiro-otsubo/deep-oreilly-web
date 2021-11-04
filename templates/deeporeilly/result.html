@@ -1,0 +1,15 @@
+{% extends "deeporeilly/base.html" %}
+{% block title %}変換結果{% endblock %}
+
+{% block content %}
+<div class="result">
+  <h4 class="mt-4 mb-5 boder-bottom">オライリー風変換結果</h4>
+  <table class="table">
+      <img src={{photo_data}}></img>
+  </table>
+  <br>
+
+  <a href="{% url 'deeporeilly:index' %}" class="btn btn-primary btn-lg btn-block">選択メニューに戻る</a>
+
+</div>
+{% endblock %}
